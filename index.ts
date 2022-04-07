@@ -25,5 +25,6 @@ ami._moteur.getMoteur().recharger();
 ami._moteur.getMoteur().recharger();
 garage.ajouterVehicule(ami,moto,camion);
 garage.afficherGarage();
+garage.afficherMotos();
 garage.retirerVehicule(moto);
 garage.afficherGarage();

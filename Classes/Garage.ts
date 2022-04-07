@@ -32,7 +32,7 @@ export default class Garage {
     /**
      * afficher les vehicules
      */
-    afficherGarage(){
+    afficherGarage():void{
         let compteur = 0;
         this._vehicules.forEach(vehicule => {
             compteur++;
@@ -44,25 +44,34 @@ export default class Garage {
     /**
      * afficher les motos
      */
-    afficherMotos(){
-        console.log(`afficher moto`);
-
+    afficherMotos():void{
+        this._vehicules.forEach(vehicule => {
+            if (vehicule.constructor.name === 'Moto') {
+                console.log(vehicule);
+            }
+        });
     }
 
     /**
      * afficher les voitures
      */
-    afficherVoitures(){
-        console.log(`afficher voitures`);
-
+    afficherVoitures():void{
+        this._vehicules.forEach(vehicule => {
+            if (vehicule.constructor.name === 'Voiture') {
+                console.log(vehicule);
+            }
+        });
     }
 
     /**
      * afficher les camions
      */
-    afficherCamions(){
-        console.log(`afficherCamions`);
-
+    afficherCamions():void{
+        this._vehicules.forEach(vehicule => {
+            if (vehicule.constructor.name === 'Camion') {
+                console.log(vehicule);
+            }
+        });
     }
 
     /**
