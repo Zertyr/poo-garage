@@ -17,9 +17,9 @@ export default class Garagiste extends Personne {
     /**
      * presente le garage du garagiste
      */
-    presenterGarage() {
-        console.log(`Voici mon garage`);
-
+    presenterGarage(garage:Garage) {
+        console.log(`Voici mon garage : `);
+        garage.afficherGarage();
     }
 
     /**

@@ -28,3 +28,4 @@ garage.afficherGarage();
 garage.afficherMotos();
 garage.retirerVehicule(moto);
 garage.afficherGarage();
+garagiste.presenterGarage(garage);
