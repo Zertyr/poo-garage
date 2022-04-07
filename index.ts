@@ -23,4 +23,7 @@ moto._moteur.augmenterTours();
 moto._moteur.getMoteur().faireLePlein();
 ami._moteur.getMoteur().recharger();
 ami._moteur.getMoteur().recharger();
-garage.ajouterVehicule(ami);
+garage.ajouterVehicule(ami,moto,camion);
+garage.afficherGarage();
+garage.retirerVehicule(moto);
+garage.afficherGarage();

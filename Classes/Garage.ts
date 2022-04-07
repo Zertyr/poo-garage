@@ -14,7 +14,7 @@ export default class Garage {
      */
     ajouterVehicule(...vehicules:Vehicule[]):void{
         vehicules.forEach(vehicule => {
-            console.log(`${vehicule.marque} ajouté au garage de ${this._garagiste} avec succès`);
+            console.log(`${vehicule.marque} ajouté au garage de ${this._garagiste._nom} avec succès`);
             this._vehicules.push(vehicule);
         });
 
@@ -25,15 +25,19 @@ export default class Garage {
      * retirer un vehicule
      * @param vehicule: le véhicule à retirer du garage
      */
-    retirerVehicule(vehicule):Vehicule[]{
-        return this._vehicules.splice(vehicule);
+    retirerVehicule(vehicule:Vehicule):Vehicule[]{
+        return this._vehicules.splice(this._vehicules.indexOf(vehicule),1);
     }
 
     /**
      * afficher les vehicules
      */
     afficherGarage(){
-        console.log(`le garage`);
+        let compteur = 0;
+        this._vehicules.forEach(vehicule => {
+            compteur++;
+            console.log(`${compteur} : ${vehicule.marque} , ${vehicule._moteur.constructor.name}`);
+        });
 
     }
 
