@@ -2,25 +2,31 @@ import Garagiste from "./Garagiste";
 import Vehicule from "./Vehicule";
 
 export default class Garage {
-    vehicules:Vehicule[] = [];
-    garagiste:Garagiste;
-    constructor() {
+    _vehicules:Vehicule[] = [];
+    _garagiste:Garagiste;
+    constructor(garagiste: Garagiste) {
+        this._garagiste = garagiste;
     }
 
     /**
      * ajouter un vehicule
+     * @param vehicules: tableau de vehicule
      */
-    ajouterVehicule(){
-        console.log(`ajoute vehicule`);
+    ajouterVehicule(...vehicules:Vehicule[]):void{
+        vehicules.forEach(vehicule => {
+            console.log(`${vehicule.marque} ajouté au garage de ${this._garagiste} avec succès`);
+            this._vehicules.push(vehicule);
+        });
 
+        
     }
 
     /**
      * retirer un vehicule
+     * @param vehicule: le véhicule à retirer du garage
      */
-    retirerVehicule(){
-        console.log(`retirer vehicule`);
-
+    retirerVehicule(vehicule):Vehicule[]{
+        return this._vehicules.splice(vehicule);
     }
 
     /**
@@ -59,6 +65,6 @@ export default class Garage {
      * get pour obtenir les vehicules
      */
     get vehicles():Vehicule[]{
-        return this.vehicules;
+        return this._vehicules;
     }
 }

@@ -37,4 +37,12 @@ export default abstract class Vehicule{
     afficherVehicule(){
         console.log(`${this}`);
     }
+
+    /**
+     * getter pour obtenir la marque
+     */
+
+    get marque(){
+        return this._marque;
+    }
 }
