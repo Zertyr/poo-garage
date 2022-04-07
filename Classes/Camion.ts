@@ -6,10 +6,16 @@ export default class Camion extends Vehicule{
         super(marque,moteur);
     }
 
+    /**
+     * attache la remorque
+     */
     attacherRemoque(){
         console.log('Attacher remorque');
     }
 
+    /**
+     * detacher la remorque
+     */
     detacherRemorque(){
         console.log('Detacher remorque');
     }

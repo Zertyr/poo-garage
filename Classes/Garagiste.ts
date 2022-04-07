@@ -6,24 +6,35 @@ export default class Garagiste extends Personne {
         super(age, nom);
     }
 
+    /**
+     * permet de conduire
+     */
     conduire() {
         console.log(`conduis`);
 
     }
 
+    /**
+     * presente le garage du garagiste
+     */
     presenterGarage() {
         console.log(`Voici mon garage`);
 
     }
 
-    // faireLePleinDeToutesLesVoitures(garage:Garage) {
-    //     garage.vehicles.forEach((vehicule) => {
-    //         if(vehicule._moteur.constructor.name == 'MoteurThermique'){
-    //         } else {
+    /**
+     * faire le pleins de toutes les voitures d'un garage
+     * @param garage: garage cible
+     */
+    faireLePleinDeToutesLesVoitures(garage:Garage) {
+        garage.vehicles.forEach((vehicule) => {
+            if(vehicule._moteur.constructor.name == 'MoteurThermique'){
+                vehicule._moteur.getMoteur().faireLePlein();
+            } else {
+                vehicule._moteur.getMoteur().recharger();
+            }
+        })
+        console.log(`J'ai fais le pleins de toutes les voitures`);
 
-    //         }
-    //     })
-    //     console.log(`Je fais le pleins de toutes les voitures`);
-
-    // }
+    }
 }

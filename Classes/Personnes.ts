@@ -7,6 +7,9 @@ export default abstract class Personne {
         this._nom = nom;
     }
 
+    /**
+     * permet d'afficher la personne'
+     */
     sePresente(){
         console.log(`Bonjour je m'appelle ${this._nom} et j'ai ${this._age} ans.`);
     }

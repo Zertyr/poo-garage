@@ -9,18 +9,31 @@ export default abstract class Vehicule{
         this._moteur = moteur;
     }
 
+    /**
+     * permet d'avancer
+     */
     avancer():void{
         console.log(`j'avance`);
     }
 
+    /**
+     * permet de reculer
+     */
     reculer():void{
         console.log(`je recule`);
     }
     
+    /**
+     * permet de freiner
+     */
     freiner():void{
         console.log(`je freine`);
     }
 
+
+    /**
+     * permet d'afficher le véhicule'
+     */
     afficherVehicule(){
         console.log(`${this}`);
     }

@@ -6,6 +6,9 @@ export default class Moto extends Vehicule{
         super(marque,moteur);
     }
 
+    /**
+     * permet de faire le keke en moto
+     */
     faireUnWheeling(){
         console.log('WHEELING');
         
